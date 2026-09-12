@@ -26,6 +26,9 @@
 !/tools/result/images/
 !/tools/result/images/.gitkeep
 
+# PyInstaller 빌드 임시 파일
+/tools/build/
+
 # Python 캐시 및 로컬 환경
 __pycache__/
 *.py[cod]

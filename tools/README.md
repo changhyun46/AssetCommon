@@ -24,3 +24,24 @@ python tools/copytool.py
 - 저장 완료 후 다음 문서용 파일명을 자동 생성
 
 기본 저장 위치는 `tools/result/`이며, 로컬 이미지는 `tools/result/images/`에 저장됩니다.
+
+## Tool Dock
+
+등록된 Python 도구를 빠르게 실행하려면 Tool Dock을 사용합니다.
+
+```powershell
+python tools/tooldock.py
+```
+
+- 기본 등록 도구: `copytool.py`
+- `툴 추가`: 다른 Python 파일을 선택한 뒤 이름과 설명을 한 번에 등록
+- 툴 추가 창에서 PNG, JPG, JPEG, ICO 아이콘을 함께 선택 가능
+- `툴 삭제`: 선택한 도구의 등록 정보만 삭제하며 실제 파일은 삭제하지 않음
+- 타일 한 번 클릭: 도구 선택
+- 타일 더블클릭: 현재 도구 실행
+- `►` 버튼: 현재 선택된 도구 실행
+- `⚙` 버튼: 현재 선택된 도구의 이름, 설명, 아이콘 변경
+- 실행은 현재 Python 인터프리터로 별도 프로세스에서 수행
+- 등록 정보는 `tools/tool_registry.json`에 저장
+- 작은 창과 네모 아이콘 타일 형태로 등록된 도구를 표시
+- 아이콘을 선택하지 않으면 기본 아이콘으로 표시

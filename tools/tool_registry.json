@@ -1,0 +1,10 @@
+{
+  "tools": [
+    {
+      "name": "copytool",
+      "script": "copytool.py",
+      "description": "",
+      "icon": ""
+    }
+  ]
+}
