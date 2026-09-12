@@ -17,6 +17,8 @@ tools/
 ├── tooldock.py          # Tool Dock 본체
 ├── tool_registry.json   # 등록된 도구 정보
 ├── icons/               # 선택한 도구 아이콘 복사본
+│   ├── tooldock.svg      # Tool Dock 원본 아이콘
+│   └── tooldock.ico      # EXE에 적용할 Windows 아이콘
 ├── copytool.py          # 기존 Markdown 수집 도구
 └── ToolDock.exe         # PyInstaller로 생성하는 실행 파일
 ```
@@ -93,7 +95,7 @@ python -m pip install pyinstaller
 프로젝트 루트에서 다음 명령을 실행합니다.
 
 ```powershell
-python -m PyInstaller --noconfirm --onefile --windowed --name ToolDock --distpath tools --workpath tools/build --specpath tools/build tools/tooldock.py
+python -m PyInstaller --noconfirm --clean --onefile --windowed --icon "tools/icons/tooldock.ico" --name ToolDock --exclude-module numpy --exclude-module pandas --exclude-module scipy --distpath tools --workpath tools/build --specpath tools/build tools/tooldock.py
 ```
 
 생성 파일:
@@ -103,6 +105,8 @@ tools/ToolDock.exe
 ```
 
 `--windowed` 옵션으로 콘솔 창 없이 실행됩니다.
+
+PyInstaller는 Windows EXE 아이콘으로 ICO 파일을 사용하므로, SVG 원본은 멀티 사이즈 ICO로 변환하여 적용합니다.
 
 ## 8. EXE 실행 시 주의 사항
 
