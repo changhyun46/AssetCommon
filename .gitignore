@@ -1,0 +1,33 @@
+# 실제 대용량 데이터와 미디어는 Git에서 제외합니다.
+/assets/**
+!/assets/**/
+!/assets/**/.gitkeep
+
+# 생성되는 데이터베이스·변환 결과·압축 파일
+*.db
+*.sqlite
+*.sqlite3
+*.parquet
+*.zip
+*.tar
+*.gz
+*.7z
+
+# 대용량 미디어 및 문서
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.pdf
+
+# CopyTool이 생성하는 로컬 이미지
+/tools/result/images/**
+!/tools/result/images/
+!/tools/result/images/.gitkeep
+
+# Python 캐시 및 로컬 환경
+__pycache__/
+*.py[cod]
+.venv/
+venv/
